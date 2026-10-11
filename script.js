@@ -1,3 +1,4 @@
+// Перше завдання
 const schedule = [
   {
     name: "Проектування ІС",
@@ -80,8 +81,41 @@ function current_lesson() {
 
 document.querySelector(".btn").addEventListener("click", current_lesson);
 
+// Друге завдання
 document.querySelectorAll(".close-btn").forEach((button) => {
   button.addEventListener("click", () => {
     button.closest(".block").remove();
   });
+});
+
+// Третє завдання
+const cells = document.querySelectorAll("#number-table td");
+const calculateButton = document.getElementById("calculate-sum");
+const resetButton = document.getElementById("reset-cells");
+const sumResult = document.getElementById("sum-result");
+
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.classList.toggle("active");
+  });
+});
+
+calculateButton.addEventListener("click", () => {
+  let sum = 0;
+
+  cells.forEach((cell) => {
+    if (cell.classList.contains("active")) {
+      sum += Number(cell.textContent);
+    }
+  });
+
+  sumResult.textContent = `Сума: ${sum}`;
+});
+
+resetButton.addEventListener("click", () => {
+  cells.forEach((cell) => {
+    cell.classList.remove("active");
+  });
+
+  sumResult.textContent = "Сума: 0";
 });

@@ -31,3 +31,21 @@ button:hover {
   margin: 15px 0;
   border-radius: 8px;
 }
+
+#number-table {
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+#number-table td {
+  border: 1px solid #222;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#number-table td.active {
+  background-color: red;
+  color: white;
+}
