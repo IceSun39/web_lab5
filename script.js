@@ -80,3 +80,8 @@ function current_lesson() {
 
 document.querySelector(".btn").addEventListener("click", current_lesson);
 
+document.querySelectorAll(".close-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    button.closest(".block").remove();
+  });
+});

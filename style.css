@@ -23,3 +23,11 @@ button {
 button:hover {
   background-color: #bed8ff;
 }
+
+.block {
+  background-color: #bed8ff;
+  border: 2px solid #2574ec;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
